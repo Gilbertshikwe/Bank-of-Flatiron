@@ -6,12 +6,28 @@ const TransactionForm = ({ newTransaction, setNewTransaction, addTransaction }) 
   return (
     <div className="container">
       <form>
+       <label>
+          Date:
+          <input
+            type="date"
+            value={newTransaction.date}
+            onChange={(e) => setNewTransaction({ ...newTransaction, date: e.target.value })}
+          />
+        </label>
         <label>
           Description:
           <input
             type="text"
             value={newTransaction.description}
             onChange={(e) => setNewTransaction({ ...newTransaction, description: e.target.value })}
+          />
+        </label>
+        <label>
+          Category:
+          <input
+            type="text"
+            value={newTransaction.category}
+            onChange={(e) => setNewTransaction({ ...newTransaction, category: e.target.value })}
           />
         </label>
         <label>
