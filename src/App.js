@@ -28,7 +28,15 @@ function App() {
 
   return (
     <div>
-      <h1>Bank Transactions</h1>
+      <h1>Flat Iron Bank Transactions</h1>
+      <>
+      <ul>
+         <li><a href="#home">Dasboard</a></li>
+         <li><a href="#news">Transactions</a></li>
+         <li><a href="#contact">Send/Request</a></li>
+         <li><a href="#about">Help</a></li>
+      </ul>
+      </>
 
       <TransactionForm
         newTransaction={newTransaction}
@@ -37,6 +45,7 @@ function App() {
       />
 
       <input
+        className ="search"
         type="text"
         placeholder="Search by description"
         value={searchTerm}
